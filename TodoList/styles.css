@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(180deg, #FFE6E6 0%, #E6F9F9 100%);
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.todo-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.todo-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: #666;
+}
+
+.todo-icon i {
+    transition: transform 0.3s ease;
+}
+
+.todo-icon i:hover {
+    transform: scale(1.1);
+    color: #FFB6C1;
+}
+
+.todo-title {
+    text-align: center;
+    color: #666;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todoInput {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #FFB6C1;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.todo-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.delete-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-panel {
+    position: absolute;
+    right: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.menu-btn {
+    padding: 8px 15px;
+    background: white;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.menu-btn:last-child {
+    border-bottom: none;
+}
+
+.menu-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-btn.active {
+    background-color: #98FB98;
+    color: white;
+} 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 添加Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="todo-container">
+
+        <!-- TODO标题 -->
+        <h1 class="todo-title">TODO</h1>
+
+        <!-- 输入框部分 -->
+        <div class="input-section">
+            <input type="text" placeholder="新增待办事项..." id="todoInput">
+            <button class="submit-btn">提交</button>
+        </div>
+
+        <!-- 任务列表部分 -->
+        <div class="todo-content">
+            <div class="todo-header">
+                <span>全部标为完成</span>
+                <span>今日事今日毕，勿将今事待明日！</span>
+            </div>
+
+            <div class="todo-list">
+                <!-- 任务项目 -->
+                <div class="todo-item">
+                    <input type="checkbox">
+                    <span>学习一首新的吉他曲目</span>
+                    <button class="delete-btn">×</button>
+                </div>
+                <div class="todo-item">
+                    <input type="checkbox">
+                    <span>尝试烘焙抹茶蛋糕</span>
+                    <button class="delete-btn">×</button>
+                </div>
+                <div class="todo-item">
+                    <input type="checkbox">
+                    <span>整理摄影作品集</span>
+                    <button class="delete-btn">×</button>
+                </div>
+                <div class="todo-item">
+                    <input type="checkbox">
+                    <span>练习15分钟冥想</span>
+                    <button class="delete-btn">×</button>
+                </div>
+                <div class="todo-item">
+                    <input type="checkbox">
+                    <span>研究一道新的咖啡配方</span>
+                    <button class="delete-btn">×</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧菜单 -->
+        <div class="menu-panel">
+            <button class="menu-btn">全部</button>
+            <button class="menu-btn">回收站</button>
+            <button class="menu-btn">全部标为已完成</button>
+            <button class="menu-btn">清除全部</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
