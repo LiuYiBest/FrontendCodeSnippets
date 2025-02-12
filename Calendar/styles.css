@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #007AFF;
+    --text-color: #333;
+    --background-color: #fff;
+    --secondary-background: #f5f5f7;
+    --border-color: #e0e0e0;
+    --hover-color: #f0f0f0;
+    --today-color: #007AFF;
+    --selected-color: #0055FF;
+}
+
+/* 深色模式变量 */
+.dark-mode {
+    --primary-color: #0A84FF;
+    --text-color: #fff;
+    --background-color: #1c1c1e;
+}
+
+/* 深色模式下的背景 */
+.dark-mode {
+    background: linear-gradient(135deg, #000000 0%, #1c1c1e 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: rgba(41, 41, 41, 0.25);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.control-btn {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:hover {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.controls-left, .controls-right {
+    display: flex;
+    gap: 10px;
+}
+
+.current-date h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.day:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.day.today {
+    background: linear-gradient(145deg, #00c6fb, #005bea);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 198, 251, 0.3);
+}
+
+.day.selected {
+    background: linear-gradient(145deg, #f857a6, #ff5858);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(248, 87, 166, 0.3);
+}
+
+.day.other-month {
+    color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .current-date h2 {
+        font-size: 20px;
+    }
+
+    .day {
+        font-size: 16px;
+    }
+}
+
+/* 深色模式下的日历容器样式 */
+.dark-mode .calendar-container {
+    background-color: rgba(28, 28, 30, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .day {
+    /* 移除这些样式，让按钮保持原来的样式 */
+}
+
+/* 修改标题和文字颜色 */
+.current-date h2 {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weekdays {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+} 

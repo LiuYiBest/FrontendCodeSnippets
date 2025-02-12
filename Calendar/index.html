@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <div class="controls-left">
+                <button id="todayBtn" class="control-btn">
+                    <i class="fas fa-calendar-day"></i>
+                    今天
+                </button>
+                <button id="themeToggle" class="control-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="current-date">
+                <h2>2024年3月</h2>
+            </div>
+            <div class="controls-right">
+                <button id="prevMonth" class="control-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextMonth" class="control-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="calendar-body">
+            <div class="weekdays">
+                <div>一</div>
+                <div>二</div>
+                <div>三</div>
+                <div>四</div>
+                <div>五</div>
+                <div>六</div>
+                <div>日</div>
+            </div>
+            <div class="days">
+                <!-- 日期将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
